@@ -44,19 +44,13 @@ class ORM {
 		$create = $this->bdd->prepare($req);
 
 		reset($fields);
-		// die(var_dump($fields));
 		foreach ($fields as $key => $value) {
-			// var_dump($key);
 			if($key == "creation_date") {
-				$i = 0;
-				foreach($value as $attribute)
-				{
-					if ($i == 0)
-					{
-						$date = $attribute;
-					}
-					$i++;
-				}
+
+				$object = new \ReflectionObject($value);
+				$prop = $object->getProperty('date');
+				$date = $prop->getValue($value);
+
 				$create->bindValue(":".$key, $date);
 			}
 			else {
