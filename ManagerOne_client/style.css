@@ -1,0 +1,48 @@
+.status-0 {
+	background-color: red;
+}
+.status-1 {
+	background-color: green;
+}
+
+h1 {
+	text-align: center;
+}
+
+form {
+	text-align: center;
+	font-size: 25px;
+	/* display: flex; */
+}
+
+label {
+	display: block;
+	font-size: 22px;
+}
+
+#container {
+	margin-top: 5vh;
+	display: flex;
+}
+
+#taskList {
+	margin-right: 2vw;
+	width: 45vw;
+	display: inline;
+	border-radius: 20px;
+}
+
+#taskList * {
+	border-radius: 5px;
+	color: black;
+	font-size: 20px;
+}
+
+#showTask {
+	margin-left: 2vw;
+	width: 45vw;
+	display: inline;
+	border: black solid 1px;
+	border-radius: 20px;
+	padding: 1vh;
+}

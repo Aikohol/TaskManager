@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>TaskManager</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="./js/apiConnect.js"></script>
+		<link rel="stylesheet" type="text/css" href="./style.css">
+	</head>
+	<body>
+		<h1>TaskManager</h1>
+		<div id="content">
+			<form id="taskForm" action="http://localhost/ManagerOne/task/add" method="POST">
+				<div>
+					<label for="titre">Titre</label>
+					<input id="titre" placeholder="titre" name="titre" type="text">
+				</div>
+				<div>
+					<label for="description">Description</label>
+					<input id="description" placeholder="description" name="description" type="text">
+				</div>
+				<div>
+					<select id="userSelect" name="user_id">
+					</select>
+				</div>
+				<input type="submit" value="create">
+			</form>
+			<form id="userForm" action="http://localhost/ManagerOne/user/add" method="POST">
+				<div>
+					<label for="name">Name</label>
+					<input id="name" placeholder="name" name="name" type="text">
+				</div>
+				<div>
+					<label for="email">Email</label>
+					<input id="email" placeholder="email" name="email" type="email">
+				</div>
+				<input type="submit" value="create">
+			</form>
+			<div id="container">
+				<ul id="taskList">
+				</ul>
+				<div id="showTask">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
