@@ -15,8 +15,7 @@ class UserController extends \Core\Controller {
 	{
 		// Working on POSTMAN
 		$user = new \src\Model\UserModel($this->params);
-		$id = $user->create();
-		$user->id = $id;
+		$user = $user->create();
 		echo json_encode($user);
 	}
 	public function showAction() {
